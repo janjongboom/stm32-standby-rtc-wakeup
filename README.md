@@ -19,6 +19,9 @@ Note that going into standby mode on STM32 will clear all state. Your applicatio
     #include "stm32_standby.h"
 
     int main() {
+        // this is required!
+        set_time(0);
+
         printf("Hello world, going to sleep for 5 seconds\n");
 
         standby(5);
